@@ -2,8 +2,8 @@ version: "2"
 
 services:
   agendav:
-    image: ghcr.io/nagimov/agendav-docker:latest
-    container_name: agendav
+    image: agendav:dev
+    container_name: agendavdev
     environment:
       - AGENDAV_SERVER_NAME=127.0.0.1
       - AGENDAV_TITLE=Welcome to Example Agendav Server
