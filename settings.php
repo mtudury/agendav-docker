@@ -37,10 +37,12 @@ $app['defaults.time.format'] = '24';
  * - dmy: dd-mm-YYYY
  * - mdy: mm-dd-YYYY
  */
-$app['defaults.date.format'] = 'ymd';
+$app['defaults.date.format'] = 'dmy';
 // Default first day of week. Options: 0 (Sunday), 1 (Monday)
 $app['defaults.weekstart'] = 1;
 // Logout redirection. Optional
 $app['logout.redirection'] = '';
 // Calendar sharing
-$app['calendar.sharing'] = true;
+$app['calendar.sharing'] = false;
+
+$app['defaults.default_view'] = 'week';
