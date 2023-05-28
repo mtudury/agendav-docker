@@ -37,7 +37,7 @@ $app['defaults.time.format'] = '24';
  * - dmy: dd-mm-YYYY
  * - mdy: mm-dd-YYYY
  */
-$app['defaults.date.format'] = 'dmy';
+$app['defaults.date_format'] = 'dmy';
 // Default first day of week. Options: 0 (Sunday), 1 (Monday)
 $app['defaults.weekstart'] = 1;
 // Logout redirection. Optional
