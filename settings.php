@@ -46,3 +46,7 @@ $app['logout.redirection'] = '';
 $app['calendar.sharing'] = false;
 
 $app['defaults.default_view'] = 'week';
+
+$app['workflow.url'] = 'AGENDAV_WORKFLOW_URL';
+
+$app['workflow.key'] = 'AGENDAV_WORKFLOW_KEY';
