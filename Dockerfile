@@ -1,8 +1,8 @@
 ARG PHP_VERSION=8.2
 
-FROM debian:bullseye-slim as downloader
+FROM debian:bullseye-slim AS downloader
 
-ENV AGENDAV_VERSION 2.6.0
+ENV AGENDAV_VERSION=2.6.0
 
 #ADD https://github.com/agendav/agendav/releases/download/$AGENDAV_VERSION/agendav-$AGENDAV_VERSION.tar.gz /tmp/
 COPY agendav.tar.gz /tmp/
@@ -14,7 +14,7 @@ RUN cd /tmp && \
 
 FROM php:${PHP_VERSION}-apache-bullseye
 
-MAINTAINER Ruslan Nagimov <nagimov@outlook.com>
+LABEL MAINTAINER="Ruslan Nagimov <nagimov@outlook.com>"
 
 ENV APACHE_RUN_USER=www-data
 ENV APACHE_RUN_GROUP=www-data
@@ -23,7 +23,7 @@ ENV APACHE_LOCK_DIR=/var/lock/apache2
 ENV APACHE_PID_FILE=/var/run/apache2/apache2.pid
 ENV TERM=xterm
 ENV AGENDAV_TIMEZONE=UTC
-ENV PHP_INI_DIR /usr/local/etc/php
+ENV PHP_INI_DIR=/usr/local/etc/php
 
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 
