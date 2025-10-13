@@ -1,4 +1,4 @@
-version=2.6.0-10
+version=2.6.0-11
 
 .DEFAULT_GOAL := build
 
