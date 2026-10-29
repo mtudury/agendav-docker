@@ -1,6 +1,6 @@
 ARG PHP_VERSION=8.2
 
-FROM debian:bullseye-slim AS downloader
+FROM debian:bookworm-slim AS downloader
 
 ENV AGENDAV_VERSION=2.6.0
 
@@ -12,7 +12,7 @@ RUN cd /tmp && \
     mv /tmp/agendav-$AGENDAV_VERSION /tmp/agendav
 
 
-FROM php:${PHP_VERSION}-apache-bullseye
+FROM php:${PHP_VERSION}-apache-bookworm
 
 LABEL MAINTAINER="Ruslan Nagimov <nagimov@outlook.com>"
 
